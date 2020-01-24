@@ -1,0 +1,92 @@
+  li.dev-item {
+    background: #FFF;
+    /*box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.02);*/
+    box-shadow: 0 0 0.7142857142857143rem #cccccc;
+    border-radius: 2px;
+    padding: 20px;
+  }
+  
+  li.dev-item header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  li.dev-item header img {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+  }
+  
+  li.dev-item header .user-info {
+    margin-left: 10px;
+  }
+  
+  .user-info strong {
+    display: block;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .user-info span {
+    font-size: 13px;
+    color: #999;
+    margin-top: 2px;
+  }
+  
+  li.dev-item p {
+    color: #666;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 10px 0;
+  }
+  
+  li.dev-item a {
+    color: #Be4dff;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  
+  li.dev-item a:hover {
+    color: #5a2ea6;
+  }
+
+  li.dev-item button[type=reset] {
+    width: 17%;
+    border: 0;
+    margin-top: 15px;
+    margin-left: 10px;
+    background: dimgrey;
+    border-radius: 2px;
+    padding: 7px 5px 5px 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.5s;
+  }
+  
+  li.dev-item button[type=reset]:hover {
+    background: rgb(80, 79, 79);
+  }
+
+  li.dev-item button[type=button] {
+    width: 17%;
+    border: 0;
+    margin-top: 15px;
+    margin-left: 10px;
+    background: #F44336;
+    border-radius: 2px;
+    padding: 7px 5px 5px 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.5s;
+  }
+  
+  li.dev-item button[type=button]:hover {
+    background: #e83528;
+  }
+
+  
