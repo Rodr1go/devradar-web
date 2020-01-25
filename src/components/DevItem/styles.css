@@ -42,16 +42,16 @@
   }
   
   li.dev-item a {
-    color: #Be4dff;
+    color: #0aad9d;
     font-size: 14px;
     text-decoration: none;
   }
   
   li.dev-item a:hover {
-    color: #5a2ea6;
+    color: #028478;
   }
 
-  li.dev-item button[type=reset] {
+  li.dev-item .btn-edit {
     width: 17%;
     border: 0;
     margin-top: 15px;
@@ -66,16 +66,16 @@
     transition: background 0.5s;
   }
   
-  li.dev-item button[type=reset]:hover {
+  li.dev-item .btn-edit:hover {
     background: rgb(80, 79, 79);
   }
 
-  li.dev-item button[type=button] {
+  li.dev-item .btn-delete {
     width: 17%;
     border: 0;
     margin-top: 15px;
     margin-left: 10px;
-    background: #F44336;
+    background: #ff6347;
     border-radius: 2px;
     padding: 7px 5px 5px 5px;
     font-size: 14px;
@@ -85,7 +85,7 @@
     transition: background 0.5s;
   }
   
-  li.dev-item button[type=button]:hover {
+  li.dev-item .btn-delete:hover {
     background: #e83528;
   }
 

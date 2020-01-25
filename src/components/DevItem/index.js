@@ -14,12 +14,12 @@ function DevItem({ dev, onUpdate, onDelete }) {
       </header> 
       <p>{dev.bio}</p>
       <a href={`https://github.com/${dev.github_username}`}>Acessar perfil no github</a>
-      <button type="reset" onClick={onUpdate}>
+      <button className="btn-edit" onClick={onUpdate}>
         <i className="material-icons">
          edit 
         </i>
       </button>
-      <button type="button" onClick={onDelete}>
+      <button className="btn-delete" onClick={onDelete}>
         <i className="material-icons">
           delete
         </i>
