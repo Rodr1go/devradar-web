@@ -9,28 +9,40 @@ import './Main.css';
 import DevForm from './components/DevForm';
 import DevItem from './components/DevItem';
 
+import PageButton from './components/PageButton';
+
 import EditDev from './components/DevForm/EditDev';
 
 function App() {
   const [devs, setDevs] = useState([]);
   const [editing, setEditing] = useState(false)
   
-  const [currentDev, setCurrentDev] = useState([])
+  const [page, setPage] = useState(1)
+  const [totalPages, setTotalPages] = useState(0)
+  
+  const [currentDev, setCurrentDev] = useState(null)
 
+  
   useEffect(() => {
     async function loadDevs() {
-      const response = await api.get('/devs');
-
-      setDevs(response.data);
+      const response = await api.get('/devs', {
+        params: { page }
+      });
+      
+      if (response.data.count <= 4) {
+        setPage(1);
+      }
+      
+      setTotalPages(Math.ceil(response.data.count / 4, 1))
+      setDevs(response.data.devs);
     }
-
     loadDevs();
-  }, [])
-  
+  }, [page])
+   
   async function handleAddDev(data) {
     const response = await api.post('/devs', data)
     
-    setDevs([...devs, response.data]);
+    setDevs([...devs, response.data.devs]);
   }
   
   async function updateDev(id, updatedDev) {
@@ -38,7 +50,7 @@ function App() {
     
     const response = await api.put(`/devs/${id}`, updatedDev)
 
-    setDevs(devs.map(dev => (dev._id === id ? response.data : dev)))
+    setDevs(devs.map(dev => (dev._id === id ? response.data.devs : dev)))
   }
 
   const editForm = dev => {
@@ -80,6 +92,19 @@ function App() {
             <DevItem key={dev._id} dev={dev} onUpdate={() => editForm(dev)} onDelete={() => deleteDev(dev, index)} />
           ))}
         </ul>
+
+        <div className="pagination">
+          <PageButton lock={page < 2} funcPage={() => setPage(page - 1)}>
+            <i className="material-icons">keyboard_arrow_left</i>
+          </PageButton>
+          
+          <PageButton
+            lock={page === totalPages}
+            funcPage={() => setPage(page + 1)}
+          >
+            <i className="material-icons">keyboard_arrow_right</i>
+          </PageButton>
+        </div>
       </main>
     </div>
   );
