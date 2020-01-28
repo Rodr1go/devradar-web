@@ -1,5 +1,5 @@
 
-button {
+button.btn-pages {
   font-size: 14px;
   cursor: pointer;
   color: #028478;
@@ -12,7 +12,7 @@ button {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-button:disabled {
-  opacity: 25%;
+button.btn-pages:disabled {
+  opacity: 35%;
   cursor: not-allowed;
 }
