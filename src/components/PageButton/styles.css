@@ -13,6 +13,6 @@ button.btn-pages {
 }
 
 button.btn-pages:disabled {
-  opacity: 35%;
+  opacity: 40%;
   cursor: not-allowed;
 }
