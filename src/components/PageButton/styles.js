@@ -1,5 +1,6 @@
+import styled from 'styled-components';
 
-button.btn-pages {
+export const Button = styled.button.attrs()`
   font-size: 14px;
   cursor: pointer;
   color: #028478;
@@ -10,9 +11,8 @@ button.btn-pages {
   background-color: #fff;
   transition: background 0.5s;
   border: 1px solid rgba(0, 0, 0, 0.1);
-}
 
-button.btn-pages:disabled {
-  opacity: 40%;
-  cursor: not-allowed;
-}
+  &:disabled {
+    opacity: 40%;
+    cursor: not-allowed;
+  }`;

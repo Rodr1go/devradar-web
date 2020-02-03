@@ -1,10 +1,10 @@
 import React from 'react';
-import './styles.css';
+import { Button } from './styles';
 
 export default function PageButton({ children, funcPage, lock }) {
   return (
-    <button className="btn-pages" disabled={lock} onClick={funcPage}>
+    <Button disabled={lock} onClick={funcPage}>
       {children}
-    </button>
+    </Button>
   );
 }

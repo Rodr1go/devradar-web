@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import api from './services/api';
 
-import './global.css';
-import './App.css';
-import './Sidebar.css';
-import './Main.css';
+import './styles/global.css';
+import './styles/App.css';
+import './styles/Sidebar.css';
+import './styles/Main.css';
 
 import DevForm from './components/DevForm';
 import DevItem from './components/DevItem';
