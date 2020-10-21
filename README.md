@@ -2,6 +2,10 @@
 Desenvolvido com ReactJS - Cujo objetivo é encontrar desenvolvedores 
 próximos via geolocalização, buscando pela tecnologia que o Dev utiliza.
 
+**A aplicação em funcionamento:**
+
+![Funcionamento](/public/vbj6w-irske.gif)
+
 Para executar a aplicação siga os passos abaixo:
 ----------------------
 
